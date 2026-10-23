@@ -1,0 +1,20 @@
+# Static site: no build step. Netlify publishes this folder as-is.
+[build]
+  publish = "."
+
+# Always fetch the latest content after you edit in /admin
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/uploads/models/*"
+  [headers.values]
+    Content-Type = "model/gltf-binary"
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
