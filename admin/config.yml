@@ -1,0 +1,234 @@
+# Decap CMS configuration for Trevor King's portfolio.
+# The only line you must change is `repo:` below (your GitHub username / repository name).
+
+backend:
+  name: github
+  repo: KingTrev/Portfolio
+  branch: main
+  commit_messages:
+    update: "Update {{collection}} “{{slug}}”"
+    uploadMedia: "Upload “{{path}}”"
+    deleteMedia: "Delete “{{path}}”"
+
+# Lets you test the admin on your own computer with `npx decap-server` (see README).
+local_backend: true
+
+site_url: https://YOUR-SITE.netlify.app
+display_url: https://YOUR-SITE.netlify.app
+logo_url: /uploads/cabin-hero.jpg
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site"
+    label: "Portfolio"
+    editor:
+      preview: false
+    files:
+
+      # ---------------- PROJECTS ----------------
+      - name: "projects"
+        label: "Projects"
+        file: "content/projects.json"
+        format: "json"
+        fields:
+          - name: "projects"
+            label: "Projects"
+            label_singular: "Project"
+            widget: "list"
+            summary: "{{fields.title}} — {{fields.category}}"
+            hint: "Drag projects to reorder them. Turn off “Show on site” to hide one without deleting it."
+            fields:
+              - { name: "title", label: "Title", widget: "string" }
+              - { name: "slug", label: "Link name", widget: "string", hint: "Short, lowercase, no spaces (used for #links). Example: cabin" }
+              - { name: "visible", label: "Show on site", widget: "boolean", default: true }
+              - { name: "category", label: "Category", widget: "string", required: false, hint: "Example: Residential, Transportation, Interactive 3D" }
+              - { name: "tools", label: "Tools", widget: "string", required: false, hint: "Example: SketchUp, D5 Render" }
+              - { name: "shows", label: "What this shows", widget: "string", required: false, hint: "Finishes the sentence “Shows: …”" }
+              - { name: "hero_image", label: "Main image (full width)", widget: "image", required: false, choose_url: false, hint: "Skipped when the project has 3D models." }
+              - { name: "hero_alt", label: "Main image description", widget: "string", required: false, hint: "For screen readers and search engines." }
+              - name: "gallery"
+                label: "Gallery images"
+                label_singular: "Image"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { name: "image", label: "Image", widget: "image", choose_url: false }
+                  - { name: "caption", label: "Caption", widget: "string", required: false }
+                  - { name: "alt", label: "Image description", widget: "string", required: false }
+              - name: "comparisons"
+                label: "Photo vs. render pairs"
+                label_singular: "Pair"
+                widget: "list"
+                required: false
+                summary: "{{fields.caption}}"
+                fields:
+                  - { name: "photo", label: "Reference photo", widget: "image", choose_url: false }
+                  - { name: "render", label: "Your render", widget: "image", choose_url: false }
+                  - { name: "caption", label: "Caption", widget: "string", required: false }
+              - name: "models"
+                label: "Interactive 3D models (.glb)"
+                label_singular: "Model"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}"
+                hint: "Upload .glb files. Keep each under about 10 MB so they load fast."
+                fields:
+                  - { name: "label", label: "Button label", widget: "string" }
+                  - { name: "file", label: "Model file", widget: "file", choose_url: false }
+              - name: "facts"
+                label: "Quick facts"
+                label_singular: "Fact"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}: {{fields.value}}"
+                fields:
+                  - { name: "label", label: "Label", widget: "string" }
+                  - { name: "value", label: "Value", widget: "string" }
+              - { name: "description", label: "Description", widget: "text", required: false }
+
+      # ---------------- PHOTOGRAPHY ----------------
+      - name: "photography"
+        label: "Photography"
+        file: "content/photography.json"
+        format: "json"
+        fields:
+          - { name: "visible", label: "Show this section", widget: "boolean", default: true }
+          - { name: "label", label: "Small label", widget: "string" }
+          - { name: "heading", label: "Heading", widget: "string" }
+          - { name: "heading_accent", label: "Heading (highlighted part)", widget: "string", required: false }
+          - name: "photos"
+            label: "Photos"
+            label_singular: "Photo"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            fields:
+              - { name: "image", label: "Photo", widget: "image", choose_url: false }
+              - { name: "caption", label: "Caption", widget: "string", required: false }
+              - { name: "alt", label: "Photo description", widget: "string", required: false }
+
+      # ---------------- SITE SETTINGS & TEXT ----------------
+      - name: "settings"
+        label: "Site text & settings"
+        file: "content/settings.json"
+        format: "json"
+        fields:
+          - { name: "site_title", label: "Browser tab title", widget: "string" }
+          - { name: "meta_description", label: "Search engine description", widget: "text" }
+          - { name: "accent_color", label: "Accent color", widget: "color", default: "#f0b35b" }
+
+          - name: "hero"
+            label: "Top of page (hero)"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "image", label: "Background image", widget: "image", choose_url: false }
+              - { name: "image_alt", label: "Image description", widget: "string", required: false }
+              - { name: "badges", label: "Badges", widget: "list", field: { name: "badge", label: "Badge", widget: "string" }, required: false }
+              - { name: "name", label: "Your name", widget: "string" }
+              - { name: "role", label: "Headline", widget: "string" }
+              - { name: "intro", label: "Intro sentence", widget: "text" }
+              - { name: "primary_button", label: "Main button text", widget: "string", default: "See the work" }
+              - { name: "show_resume_button", label: "Show “View résumé” button", widget: "boolean", default: true }
+
+          - name: "about"
+            label: "About me"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "visible", label: "Show this section", widget: "boolean", default: true }
+              - { name: "label", label: "Small label", widget: "string" }
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "heading_accent", label: "Heading (highlighted part)", widget: "string", required: false }
+              - { name: "lede", label: "Opening sentence", widget: "text" }
+              - { name: "paragraphs", label: "Paragraphs", widget: "list", field: { name: "paragraph", label: "Paragraph", widget: "text" } }
+              - name: "timeline"
+                label: "Timeline"
+                label_singular: "Timeline entry"
+                widget: "list"
+                summary: "{{fields.when}} — {{fields.title}}"
+                fields:
+                  - { name: "when", label: "When", widget: "string" }
+                  - { name: "title", label: "Title", widget: "string" }
+                  - { name: "where", label: "Where", widget: "string", required: false }
+                  - { name: "text", label: "Description", widget: "text", required: false }
+                  - { name: "current", label: "Highlight as current", widget: "boolean", default: false }
+
+          - name: "process"
+            label: "How I work"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "visible", label: "Show this section", widget: "boolean", default: true }
+              - { name: "label", label: "Small label", widget: "string" }
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "heading_accent", label: "Heading (highlighted part)", widget: "string", required: false }
+              - name: "steps"
+                label: "Steps"
+                label_singular: "Step"
+                widget: "list"
+                summary: "{{fields.label}} {{fields.title}}"
+                fields:
+                  - { name: "label", label: "Step label", widget: "string", hint: "Example: 01 · Model" }
+                  - { name: "title", label: "Title", widget: "string" }
+                  - { name: "text", label: "Description", widget: "text" }
+                  - { name: "tools", label: "Tools", widget: "string", required: false }
+              - name: "extras"
+                label: "Extra skills cards"
+                label_singular: "Card"
+                widget: "list"
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: "title", label: "Title", widget: "string" }
+                  - { name: "text", label: "Description", widget: "text" }
+
+          - name: "work"
+            label: "Work section intro"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "label", label: "Small label", widget: "string" }
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "heading_accent", label: "Heading (highlighted part)", widget: "string", required: false }
+              - { name: "intro", label: "Intro text", widget: "text", required: false }
+
+          - name: "skills"
+            label: "Skills & credentials"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "visible", label: "Show this section", widget: "boolean", default: true }
+              - { name: "label", label: "Small label", widget: "string" }
+              - name: "groups"
+                label: "Columns"
+                label_singular: "Column"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { name: "title", label: "Column title", widget: "string" }
+                  - name: "items"
+                    label: "Items"
+                    label_singular: "Item"
+                    widget: "list"
+                    summary: "{{fields.name}} — {{fields.detail}}"
+                    fields:
+                      - { name: "name", label: "Skill or credential", widget: "string" }
+                      - { name: "detail", label: "Detail", widget: "string", required: false }
+
+          - name: "contact"
+            label: "Contact"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "label", label: "Small label", widget: "string", default: "Contact" }
+              - { name: "heading", label: "Heading", widget: "string" }
+              - { name: "heading_accent", label: "Heading (highlighted part)", widget: "string", required: false }
+              - { name: "email", label: "Email", widget: "string" }
+              - { name: "phone", label: "Phone", widget: "string", required: false }
+              - { name: "location", label: "Location", widget: "string", required: false }
+              - { name: "linkedin", label: "LinkedIn URL", widget: "string", required: false }
+              - { name: "resume", label: "Résumé (PDF)", widget: "file", required: false, choose_url: false }
+              - { name: "footer_note", label: "Footer note", widget: "string", required: false }

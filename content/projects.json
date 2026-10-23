@@ -1,0 +1,90 @@
+{
+  "projects": [
+    {
+      "title": "Hillside Cabin",
+      "slug": "cabin",
+      "visible": true,
+      "category": "Residential",
+      "tools": "SketchUp, D5 Render",
+      "shows": "renders that hold up next to real photographs",
+      "hero_image": "/uploads/cabin-wide.jpg",
+      "hero_alt": "Wide view of the cabin on its slope with trees behind and a pond below",
+      "gallery": [],
+      "comparisons": [
+        {"photo": "/uploads/cabin-reference.jpg", "render": "/uploads/cabin-wide.jpg", "caption": "Front three-quarter view"},
+        {"photo": "/uploads/cabin-reference-side.jpg", "render": "/uploads/cabin-side.jpg", "caption": "Side elevation"}
+      ],
+      "models": [],
+      "facts": [
+        {"label": "Brief", "value": "Rebuild a real cabin from photos"},
+        {"label": "Modeling", "value": "SketchUp"},
+        {"label": "Rendering", "value": "D5 Render, Megascans"}
+      ],
+      "description": "I rebuilt a real cabin and its sloped site from photographs, then matched the original shots. The building, stilts and terrain were modeled in SketchUp. In D5 I used real materials instead of projecting the photo, and AI atmosphere matching to land the sky and color grade."
+    },
+    {
+      "title": "Vertical Forest Pergola",
+      "slug": "pergola",
+      "visible": true,
+      "category": "Outdoor living",
+      "tools": "SketchUp, Enscape",
+      "shows": "taking my own design from idea to finished render",
+      "hero_image": "/uploads/pergola-hero.jpg",
+      "hero_alt": "Steel pergola with slatted walls, living plant walls and a hanging chair in a backyard",
+      "gallery": [
+        {"image": "/uploads/pergola-seating.jpg", "caption": "Seating and fire pit", "alt": "Seating area with sofa, rattan chairs, fire pit and planted wall"},
+        {"image": "/uploads/pergola-front.jpg", "caption": "Planted roof and living walls", "alt": "Front view of the pergola with plants across the roof"}
+      ],
+      "comparisons": [],
+      "models": [],
+      "facts": [
+        {"label": "Brief", "value": "Design a backyard pergola"},
+        {"label": "Inspiration", "value": "Vertical Forest, Milan"},
+        {"label": "Features", "value": "Living walls, seating, fire pit"}
+      ],
+      "description": "Milan's Vertical Forest towers are covered in trees and plants that clean the air and bring nature back into the city. I brought that idea down to backyard scale: a steel pergola with living walls and a planted roof, plus built-in seating and a fire pit for gathering with family and friends."
+    },
+    {
+      "title": "Launch Day",
+      "slug": "launch",
+      "visible": true,
+      "category": "Interactive 3D",
+      "tools": "SketchUp",
+      "shows": "large, detailed models you can explore in the browser",
+      "hero_image": "",
+      "hero_alt": "",
+      "gallery": [],
+      "comparisons": [],
+      "models": [
+        {"label": "Crawler-Transporter", "file": "/uploads/models/crawler-transporter.glb"},
+        {"label": "Discovery", "file": "/uploads/models/discovery.glb"}
+      ],
+      "facts": [
+        {"label": "Subject", "value": "NASA Crawler-Transporter, Space Shuttle Discovery"},
+        {"label": "Built in", "value": "SketchUp"}
+      ],
+      "description": "Two of the machines behind a shuttle launch: the Crawler-Transporter with its mobile launch platform and tower, and Discovery mounted on its external tank and boosters. Drag to look around, zoom in on the treads and trusses, or switch between them."
+    },
+    {
+      "title": "Fan Prop Study",
+      "slug": "prop",
+      "visible": true,
+      "category": "Product study",
+      "tools": "AutoCAD 3D",
+      "shows": "pushing a drafting tool further than it's usually taken",
+      "hero_image": "",
+      "hero_alt": "",
+      "gallery": [
+        {"image": "/uploads/prop-stand.jpg", "caption": "Fan prop study · AutoCAD 3D", "alt": "Wrist-mounted fan prop on a wood base etched with a web pattern"},
+        {"image": "/uploads/prop-case.jpg", "caption": "In its display case", "alt": "The prop and base inside a clear display case"}
+      ],
+      "comparisons": [],
+      "models": [],
+      "facts": [
+        {"label": "Tools", "value": "AutoCAD 3D only"},
+        {"label": "Focus", "value": "Detail and materials"}
+      ],
+      "description": "A detailed prop and display base built start to finish in AutoCAD's 3D tools, including the materials and final renders. Most people only use AutoCAD for 2D drafting."
+    }
+  ]
+}

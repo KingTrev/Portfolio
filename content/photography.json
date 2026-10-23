@@ -1,0 +1,14 @@
+{
+  "visible": true,
+  "label": "Behind the camera",
+  "heading": "Where I learned",
+  "heading_accent": "light.",
+  "photos": [
+    {"image": "/uploads/photos/alley.jpg", "caption": "Reflection, downtown alley", "alt": "Wet brick alley with lampposts reflected in a puddle"},
+    {"image": "/uploads/photos/towers.jpg", "caption": "Towers", "alt": "Two high-rise towers seen from below against a cloudy sky"},
+    {"image": "/uploads/photos/portrait.jpg", "caption": "Portrait in the wind", "alt": "Portrait of a woman looking back over a shearling collar, hair blown by wind"},
+    {"image": "/uploads/photos/roof.jpg", "caption": "Collapsed roof", "alt": "Collapsed wooden roof against a bright sky"},
+    {"image": "/uploads/photos/lab.jpg", "caption": "Window light", "alt": "Window light across a row of computer monitors"},
+    {"image": "/uploads/photos/rust.jpg", "caption": "Weathered metal", "alt": "Weathered metal surface with a drop of water"}
+  ]
+}

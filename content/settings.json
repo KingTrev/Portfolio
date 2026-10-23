@@ -1,0 +1,118 @@
+{
+  "site_title": "Trevor King · 3D Visualization",
+  "meta_description": "Portfolio of Trevor King, a CAD designer moving into 3D visualization in Denver, Colorado.",
+  "accent_color": "#f0b35b",
+  "hero": {
+    "image": "/uploads/cabin-hero.jpg",
+    "image_alt": "Dark standing-seam cabin on a wooded hillside at dusk, boulders in the foreground",
+    "badges": ["Denver, Colorado", "CAD designer → 3D visualization", "Open to viz roles"],
+    "name": "Trevor King",
+    "role": "CAD designer moving into 3D visualization.",
+    "intro": "I draft civil and transportation plans at Kimley-Horn, and for the past six months I've also been building SketchUp and 3ds Max models of our civil projects for marketing. Visualization is where I'm taking my career.",
+    "primary_button": "See the work",
+    "show_resume_button": true
+  },
+  "about": {
+    "visible": true,
+    "label": "About me",
+    "heading": "From plan sheets",
+    "heading_accent": "to pictures.",
+    "lede": "I already work on both sides: drafting the plans, then turning them into 3D models that show people what will be built. Now I want visualization to be the whole job.",
+    "paragraphs": [
+      "My degree in CAD and architecture was built around 3D modeling: SketchUp, 3ds Max, AutoCAD 3D and several rendering programs, along with photography and Photoshop. Drafting at Kimley-Horn taught me to read engineering plans closely and get the details right, because someone builds from them. For the past six months I've put both together, modeling civil projects in SketchUp and 3ds Max for marketing.",
+      "Photography taught me to look at light and composition. Visualization is where it all comes together: accurate models from real drawings, presented so a client, a city council or a neighbor can see what's coming."
+    ],
+    "timeline": [
+      {
+        "when": "Now",
+        "title": "Moving into visualization",
+        "where": "Highlands Ranch, CO",
+        "text": "Looking for a full-time visualization role. Building new work in SketchUp, 3ds Max, D5 and Enscape, and finishing my FAA Part 107 drone certification for aerial capture.",
+        "current": true
+      },
+      {
+        "when": "Last 6 months",
+        "title": "3D Modeling for Marketing",
+        "where": "Kimley-Horn · Greenwood Village, CO",
+        "text": "Building SketchUp and 3ds Max models of civil projects for marketing and presentations, alongside my drafting work.",
+        "current": false
+      },
+      {
+        "when": "2024 – present",
+        "title": "CAD Technician & Designer",
+        "where": "Kimley-Horn · Greenwood Village, CO",
+        "text": "Drawing sets in Civil 3D and AutoCAD for civil, roadway and transit projects. Led drafting on a project team, splitting the work and reviewing it to hit submittals.",
+        "current": false
+      },
+      {
+        "when": "Graduated 2024",
+        "title": "A.S., CAD & Architecture",
+        "where": "Front Range Community College · Fort Collins, CO",
+        "text": "Coursework centered on 3D modeling and rendering in SketchUp, 3ds Max and AutoCAD 3D, plus Revit, photography and Photoshop. Autodesk AutoCAD Certified User.",
+        "current": false
+      }
+    ]
+  },
+  "process": {
+    "visible": true,
+    "label": "How I work",
+    "heading": "From engineering data",
+    "heading_accent": "to a finished image.",
+    "steps": [
+      {"label": "01 · Source data", "title": "CAD, BIM and site data", "text": "Civil 3D surfaces and alignments, AutoCAD linework, Revit models, Google Earth and aerial imagery. I read the plans before I model anything.", "tools": "Civil 3D · AutoCAD · Revit"},
+      {"label": "02 · Model", "title": "Clean, accurate 3D", "text": "Buildings, roadways and site context built to the design and kept light enough to render in real time.", "tools": "SketchUp · 3ds Max · AutoCAD 3D"},
+      {"label": "03 · Render", "title": "Materials, light and story", "text": "Real-time scenes with scanned vegetation and materials, lit and framed to explain the project.", "tools": "D5 · Enscape · Lumion · Twinmotion"},
+      {"label": "04 · Finish", "title": "Post and delivery", "text": "Color, entourage and cleanup in Photoshop, then stills, comparisons or interactive 3D for the web.", "tools": "Photoshop · web 3D"}
+    ],
+    "extras": [
+      {"title": "AI-assisted workflows", "text": "I use AI tools in production: D5's AI material and atmosphere matching, and AI-assisted conversion of CAD linework into 3D models."},
+      {"title": "Automation", "text": "Custom 3ds Max scripts that speed up modeling, like SketchUp-style push/pull inside Max."},
+      {"title": "Aerial capture", "text": "FAA Part 107 drone certification in progress, for site photos, reality capture and photo-matching."}
+    ]
+  },
+  "work": {
+    "label": "Selected work",
+    "heading": "Selected projects,",
+    "heading_accent": "each with a purpose.",
+    "intro": "Each project below was chosen to show one thing I can do for a team: match reality, design something new, handle a complex model, and push the tools further than usual."
+  },
+  "skills": {
+    "visible": true,
+    "label": "Skills and credentials",
+    "groups": [
+      {"title": "Modeling and drafting", "items": [
+        {"name": "Civil 3D", "detail": "Daily, roadway & transit"},
+        {"name": "AutoCAD", "detail": "Certified User, 2D & 3D"},
+        {"name": "SketchUp", "detail": "Civil marketing models"},
+        {"name": "Revit", "detail": "BIM"},
+        {"name": "3ds Max", "detail": "Civil marketing models"}
+      ]},
+      {"title": "Rendering", "items": [
+        {"name": "D5 Render", "detail": "Real-time"},
+        {"name": "Enscape", "detail": "Real-time"},
+        {"name": "Lumion", "detail": "Real-time"},
+        {"name": "Twinmotion", "detail": "Real-time"},
+        {"name": "Photoshop", "detail": "Post-production"},
+        {"name": "Photography", "detail": "Composition, light"}
+      ]},
+      {"title": "Credentials", "items": [
+        {"name": "A.S., CAD & Architecture", "detail": "FRCC, 2024"},
+        {"name": "Autodesk AutoCAD Certified User", "detail": "2024"},
+        {"name": "Revit, SketchUp, CAD certificates", "detail": "FRCC, 2024"},
+        {"name": "AutoCAD 3D Graphics Mastery", "detail": "2023"},
+        {"name": "FAA Part 107 Remote Pilot", "detail": "In progress"}
+      ]}
+    ]
+  },
+  "contact": {
+    "label": "Contact",
+    "heading": "Have a project that needs to be",
+    "heading_accent": "seen?",
+    "email": "trevor.king@ideapointcreative.com",
+    "phone": "(321) 684-2214",
+    "location": "Highlands Ranch, CO",
+    "linkedin": "https://www.linkedin.com/in/trevor-king-0744a0186",
+    "resume": "/uploads/trevor-king-resume.pdf",
+    "footer_note": "Open to visualization roles and freelance work"
+  }
+}
